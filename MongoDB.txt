@@ -48,7 +48,7 @@ greater than 3, less than or equal to 10, between 1 and 9 (inclusive)
 > db.students.update({}, {$rename: {"number_of_belts":"belts_earned"}})
 
 14. Remove the 'lucky_number' field.
-	db.students.update({}, {$unset:{lucky_number:""}},{multi:true})
+>db.students.update({}, {$unset:{lucky_number:""}},{multi:true})
 
 15. Add a 'updated_on' field, and set the value as the current date.
-	db.students.update({}, {$currentDate:{updated_on:true}},{multi:true})
+>db.students.update({}, {$currentDate:{updated_on:true}},{multi:true})
