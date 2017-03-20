@@ -17,8 +17,8 @@ app.set('view engine', 'ejs');
 var Schema = mongoose.Schema;
 
 var PostSchema = new mongoose.Schema({
- name:{type:String, required:true},
- text: {type: String, required: true },
+ name:{type:String, required:true, minlength: 4},
+ text: {type: String, required: true},
  comments: [{type: Schema.Types.ObjectId, ref: 'Comment'}]
 }, {timestamps: true });
 

@@ -14,10 +14,10 @@
     </form>
     <hr>
     <% for(var post of posts){%>
-      <p><%= post.name %></p>
-      <p><%= post.text %></p>
+      <p><strong>Name: </strong><%= post.name %></p>
+      <p><strong>Post: </strong><%= post.text %></p>
       <p><%for(var comment of post.comments){%>
-          <p><%= comment.name%></p>
+          <p><strong><%= comment.name%></strong></p>
           <p><%= comment.text%></p>
         <%}%>
       </p>
