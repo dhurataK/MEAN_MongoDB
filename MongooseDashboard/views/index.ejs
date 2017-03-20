@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mongoose Dashboard</title>
+  </head>
+  <body>
+    <h1>All animals in our Mongoose</h1>
+    <% for(var animal of animals){%>
+      <p><strong>Name: </strong><%= animal.name%></p>
+      <p><strong>Family: </strong><%= animal.family%></p>
+      <p><strong>Location: </strong><%= animal.location%></p>
+      <p><strong>Number of Legs: </strong><%= animal.num_of_legs%></p>
+      <a href="/animal/edit/<%= animal.id%>"><button name="button">Edit</button></a>
+      <form action="/animal/destroy/<%= animal.id%>" method="post">
+        <input type="submit" value="Delete">
+      </form>
+      <hr>
+    <%}%>
+    <a href="/animal/new">Add e new animal</a>
+  </body>
+</html>
