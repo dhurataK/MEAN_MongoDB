@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>QuotingDojo</title>
+  </head>
+  <body>
+    <h2>Here are the awesome quotes!</h2>
+    <% for(user of users){ %>
+      <p><%= user.quote %></p>
+      <p>- <%= user.name %> <%= user.createdAt %></p>
+      <hr>
+    <%}%>
+  </body>
+</html>
