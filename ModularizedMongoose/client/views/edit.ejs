@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit page</title>
+  </head>
+  <body>
+    <h1>Edit page</h1>
+    <form action="/animals/<%=animal.id%>" method="post">
+      Name: <input type="text" name="name" value="<%=animal.name%>"> <br>
+      Family: <input type="text" name="family" value="<%=animal.family%>"><br>
+      Where does it live: <input type="text" name="location" value="<%=animal.location%>"><br>
+      Number of legs: <input type="text" name="num_of_legs" value="<%=animal.num_of_legs%>"><br>
+      <input type="submit" value="Update">
+    </form>
+  </body>
+</html>
